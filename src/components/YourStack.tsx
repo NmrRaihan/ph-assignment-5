@@ -24,7 +24,7 @@ export default function YourStack({ stack, onRemove, onRemoveAll }: YourStackPro
         ) : (
           stack.map((tech) => (
             <div key={tech.id} className="flex items-center gap-3 rounded-lg border border-gray-100 p-3">
-              <img src={tech.icon} alt={tech.name} className="h-8 w-8 flex-shrink-0 object-contain" />
+              <img src={tech.icon} alt={tech.name} className="h-8 w-8 shrink-0 object-contain" />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-semibold text-ink">{tech.name}</p>
                 <p className="text-xs text-gray-400">{tech.category}</p>
