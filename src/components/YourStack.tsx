@@ -32,7 +32,7 @@ export default function YourStack({ stack, onRemove, onRemoveAll }: YourStackPro
               <button
                 onClick={() => onRemove(tech.id)}
                 aria-label={`Remove ${tech.name}`}
-                className="flex-shrink-0 text-gray-400 transition hover:text-red-500"
+                className="shrink-0 text-gray-400 transition hover:text-red-500"
               >
                 ✕
               </button>
