@@ -1,5 +1,5 @@
 @import "tailwindcss";
-/* @config "../tailwind.config.js";
+@config "../tailwind.config.js";
 
 @layer base {
   html {
@@ -14,4 +14,4 @@
   .text-gradient {
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
-} */
+}
