@@ -1,32 +1,26 @@
-# React + TypeScript + Vite
+# 🧱 DevStack Builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+**DevStack Builder** is a React + TypeScript web app that lets you browse a curated list of modern
+development technologies — frontend, backend, database, language, styling, DevOps, and tooling — and
+build your own personal tech stack by adding the ones you like to a "Your Stack" panel.
 
-Currently, two official plugins are available:
+## 🛠️ Tech Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19 + TypeScript** (Vite) — typed, component-based UI
+- **Tailwind CSS v4** — utility-first styling via the `@tailwindcss/vite` plugin, with a single shared
+  brand gradient (orange → pink → violet)
+- **React-Toastify** — toast notifications for add / duplicate / remove / remove-all actions
+- **JSON** — technology data loaded at runtime via `fetch`, typed against a `Technology` interface
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+1. **Build-your-own stack** — click "Add to Stack" on any of the 15 technology cards and it instantly
+   appears in the sticky "Your Stack" sidebar, with the source card's button switching to a disabled
+   "✓ Added to Stack" state.
+2. **Guarded duplicates & one-click reset** — trying to add the same technology twice shows a toast
+   warning instead of a duplicate entry; "Remove All" clears the whole stack, and each stack item also
+   has its own ✕ to remove just that one.
+3. **Fully responsive, themeable, type-safe UI** — a sticky navbar that collapses into a hamburger menu
+   on mobile, a 3 → 2 → 1 column technology grid, and a whole-site gradient theme defined in exactly one
+   place (`tailwind.config.js`). Every component's props are typed via `Technology` in
+   `src/types/technology.ts`, so passing the wrong shape of data is a compile-time error, not a runtime bug.
