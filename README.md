@@ -24,3 +24,43 @@ build your own personal tech stack by adding the ones you like to a "Your Stack"
    on mobile, a 3 → 2 → 1 column technology grid, and a whole-site gradient theme defined in exactly one
    place (`tailwind.config.js`). Every component's props are typed via `Technology` in
    `src/types/technology.ts`, so passing the wrong shape of data is a compile-time error, not a runtime bug.
+
+
+## 🚀 Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL Vite prints (usually `http://localhost:5173`).
+
+To type-check and build for production:
+
+```bash
+npm run build
+```
+
+## 📁 Project Structure
+
+    src/
+      assets/
+        hero illustration
+        logo
+        hamburger icon
+        devicon
+      types/
+        technology.ts
+      components/
+        Navbar
+        Hero
+        Loader
+        TechnologyCard
+        TechnologyGrid
+        YourStack
+        Footer(.tsx)
+      App.tsx data fetching, loading state, stack state/logic
+      main.tsx app entry + ToastContainer
+    public/
+      data/
+        technologies.json technology data, fetched at runtime
