@@ -37,7 +37,7 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2 sm:gap-3">
-          <button className="hidden text-sm font-semibold text-ink transition hover:opacity-70 sm:inline-block">
+          <button className="text-sm font-semibold text-ink transition hover:opacity-70">
             Sign In
           </button>
           <button className="rounded-full bg-brand-gradient px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:opacity-90">
